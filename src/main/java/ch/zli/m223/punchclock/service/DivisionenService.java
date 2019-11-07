@@ -14,4 +14,8 @@ public class DivisionenService {
     private DivisionenRepository divisionenRepository;
 
     public List<Divisionen> findAll() {return divisionenRepository.findAll(); }
+
+    public Long dividiereZahlen(Long ersteZahl, Long zahlZwei) {
+        return ersteZahl / zahlZwei;
+    }
 }

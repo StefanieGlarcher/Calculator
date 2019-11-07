@@ -12,15 +12,6 @@ import java.time.LocalDateTime;
 public class Initialize {
 
     @Autowired
-    private EntryRepository entryRepository;
-
-    @Autowired
-    private KategorieRepository kategorieRepository;
-
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
     private AdditionenRepository additionenRepository;
 
     @Autowired
@@ -34,11 +25,6 @@ public class Initialize {
 
     @PostConstruct
     public void initialize(){
-        Kategorie kategorie = new Kategorie(1, "Test");
-        kategorie = kategorieRepository.save(kategorie);
-
-        User user = new User(1, "Steffi", "Steffi");
-        user = userRepository.save(user);
 
         Additionen additionen = new Additionen(1, 10, 10, 12);
         additionen = additionenRepository.save(additionen);
@@ -51,13 +37,6 @@ public class Initialize {
 
         Divisionen divisionen = new Divisionen(1, 50, 10, 100);
         divisionen = divisionenRepository.save(divisionen);
-
-        LocalDateTime localDateTime = LocalDateTime.now();
-        Entry entry = new Entry(1, localDateTime, localDateTime);
-        entryRepository.save(entry);
-
-        Entry entry2 = new Entry(2, localDateTime, localDateTime, kategorie);
-        entryRepository.save(entry2);
 
     }
 

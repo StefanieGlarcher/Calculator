@@ -4,16 +4,14 @@ import ch.zli.m223.punchclock.domain.Divisionen;
 import ch.zli.m223.punchclock.service.DivisionenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/divisionen")
 public class DivisionenController {
+
     @Autowired
     private DivisionenService divisionenService;
 
@@ -22,6 +20,12 @@ public class DivisionenController {
     public List<Divisionen> findAllDivisionen() {
         return divisionenService.findAll();
 
+    }
+
+    @PostMapping(value = "/{zahlEins}/{zahlZwei}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Long dividiereZahlen(@PathVariable(name = "zahlEins") Long ersteZahl, @PathVariable(name = "zahlZwei") Long zahlZwei) {
+        return divisionenService.dividiereZahlen(ersteZahl, zahlZwei);
     }
 }
 

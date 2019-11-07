@@ -6,10 +6,7 @@ import ch.zli.m223.punchclock.service.AdditionenService;
 import ch.zli.m223.punchclock.service.SubtraktionenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +22,11 @@ public class SubtraktionController {
     public List<Subtraktionen> findAllSubtraktionen() {
         return subtraktionenService.findAll();
 
+    }
+
+    @PostMapping(value = "/{zahlEins}/{zahlZwei}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Long subtrahiereZahlen(@PathVariable(name = "zahlEins") Long ersteZahl, @PathVariable(name = "zahlZwei") Long zahlZwei) {
+        return subtraktionenService.subtrahiereZahlen(ersteZahl, zahlZwei);
     }
 }

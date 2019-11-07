@@ -17,4 +17,8 @@ public class SubtraktionenService {
     public List<Subtraktionen> findAll() {
         return subtraktionenRepository.findAll();
     }
+
+    public Long subtrahiereZahlen(Long ersteZahl, Long zahlZwei) {
+        return ersteZahl - zahlZwei;
+    }
 }

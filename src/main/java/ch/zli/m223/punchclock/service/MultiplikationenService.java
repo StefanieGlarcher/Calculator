@@ -15,6 +15,9 @@ public class MultiplikationenService {
 
     public List<Multiplikationen> findAll() {return multiplikationenRepository.findAll(); }
 
+    public Long multipliziereZahlen(Long ersteZahl, Long zahlZwei) {
+        return ersteZahl * zahlZwei;
+    }
 }
 
 

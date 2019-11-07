@@ -4,10 +4,7 @@ import ch.zli.m223.punchclock.domain.Multiplikationen;
 import ch.zli.m223.punchclock.service.MultiplikationenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +19,11 @@ public class MultiplikationenController {
     public List<Multiplikationen> findAllMultiplikationen() {
         return multiplikationenService.findAll();
 
+    }
+
+    @PostMapping(value = "/{zahlEins}/{zahlZwei}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Long multipliziereZahlen(@PathVariable(name = "zahlEins") Long ersteZahl, @PathVariable(name = "zahlZwei") Long zahlZwei) {
+        return multiplikationenService.multipliziereZahlen(ersteZahl, zahlZwei);
     }
 }

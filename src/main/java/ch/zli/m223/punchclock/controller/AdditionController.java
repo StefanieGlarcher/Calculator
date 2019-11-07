@@ -1,7 +1,6 @@
 package ch.zli.m223.punchclock.controller;
 
 import ch.zli.m223.punchclock.domain.Additionen;
-import ch.zli.m223.punchclock.domain.Entry;
 import ch.zli.m223.punchclock.service.AdditionenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

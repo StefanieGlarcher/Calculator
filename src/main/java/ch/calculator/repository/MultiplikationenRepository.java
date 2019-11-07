@@ -1,6 +1,6 @@
-package ch.zli.m223.punchclock.repository;
+package ch.calculator.repository;
 
-import ch.zli.m223.punchclock.domain.Multiplikationen;
+import ch.calculator.domain.Multiplikationen;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MultiplikationenRepository extends JpaRepository<Multiplikationen, Long> {

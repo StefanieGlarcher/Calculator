@@ -1,9 +1,7 @@
-package ch.zli.m223.punchclock.controller;
+package ch.calculator.controller;
 
-import ch.zli.m223.punchclock.domain.Additionen;
-import ch.zli.m223.punchclock.domain.Subtraktionen;
-import ch.zli.m223.punchclock.service.AdditionenService;
-import ch.zli.m223.punchclock.service.SubtraktionenService;
+import ch.calculator.domain.Subtraktionen;
+import ch.calculator.service.SubtraktionenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package ch.zli.m223.punchclock.config;
+package ch.calculator.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;

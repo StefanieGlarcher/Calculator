@@ -1,12 +1,19 @@
-package ch.zli.m223.punchclock.config;
+package ch.calculator.config;
 
-import ch.zli.m223.punchclock.domain.*;
-import ch.zli.m223.punchclock.repository.*;
+import ch.calculator.domain.Additionen;
+import ch.calculator.domain.Divisionen;
+import ch.calculator.domain.Multiplikationen;
+import ch.calculator.domain.Subtraktionen;
+import ch.calculator.repository.AdditionenRepository;
+import ch.calculator.repository.DivisionenRepository;
+import ch.calculator.repository.MultiplikationenRepository;
+import ch.calculator.repository.SubtraktionenRepository;
+import ch.calculator.domain.*;
+import ch.calculator.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.time.LocalDateTime;
 
 @Component
 public class Initialize {

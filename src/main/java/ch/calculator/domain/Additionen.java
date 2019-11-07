@@ -1,9 +1,9 @@
-package ch.zli.m223.punchclock.domain;
+package ch.calculator.domain;
 
 import javax.persistence.*;
 
 @Entity
-public class Subtraktionen {
+public class Additionen {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,14 +20,14 @@ public class Subtraktionen {
 
 
 
-    public Subtraktionen(long id, long zahlEins, long zahlZwei, long resultat) {
+    public Additionen(long id, long zahlEins, long zahlZwei, long resultat) {
         this.id = id;
         this.zahlEins = zahlEins;
         this.zahlZwei = zahlZwei;
-        this.resultat = zahlEins - zahlZwei;
+        this.resultat = zahlEins + zahlZwei;
     }
 
-    public Subtraktionen(){}
+    public Additionen(){}
 
     public Long getId() {
         return id;
@@ -61,3 +61,4 @@ public class Subtraktionen {
         this.resultat = resultat;
     }
 }
+

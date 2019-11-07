@@ -1,7 +1,7 @@
-package ch.zli.m223.punchclock.service;
+package ch.calculator.service;
 
-import ch.zli.m223.punchclock.domain.Divisionen;
-import ch.zli.m223.punchclock.repository.DivisionenRepository;
+import ch.calculator.domain.Divisionen;
+import ch.calculator.repository.DivisionenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

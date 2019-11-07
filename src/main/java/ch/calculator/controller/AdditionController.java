@@ -1,12 +1,11 @@
-package ch.zli.m223.punchclock.controller;
+package ch.calculator.controller;
 
-import ch.zli.m223.punchclock.domain.Additionen;
-import ch.zli.m223.punchclock.service.AdditionenService;
+import ch.calculator.service.AdditionenService;
+import ch.calculator.domain.Additionen;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController

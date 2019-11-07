@@ -1,7 +1,7 @@
-package ch.zli.m223.punchclock.service;
+package ch.calculator.service;
 
-import ch.zli.m223.punchclock.domain.Additionen;
-import ch.zli.m223.punchclock.repository.AdditionenRepository;
+import ch.calculator.repository.AdditionenRepository;
+import ch.calculator.domain.Additionen;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

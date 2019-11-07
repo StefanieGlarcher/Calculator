@@ -1,7 +1,7 @@
-package ch.zli.m223.punchclock.service;
+package ch.calculator.service;
 
-import ch.zli.m223.punchclock.domain.Subtraktionen;
-import ch.zli.m223.punchclock.repository.SubtraktionenRepository;
+import ch.calculator.repository.SubtraktionenRepository;
+import ch.calculator.domain.Subtraktionen;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

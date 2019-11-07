@@ -1,6 +1,6 @@
-package ch.zli.m223.punchclock.repository;
+package ch.calculator.repository;
 
-import ch.zli.m223.punchclock.domain.Subtraktionen;
+import ch.calculator.domain.Subtraktionen;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SubtraktionenRepository extends JpaRepository<Subtraktionen, Long> {

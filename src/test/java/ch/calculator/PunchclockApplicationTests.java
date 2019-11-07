@@ -1,4 +1,4 @@
-package ch.zli.m223.punchclock;
+package ch.calculator;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
